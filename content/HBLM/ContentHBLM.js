@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import {
     View, Text, Image,
     TouchableOpacity,
-    ScrollView, FlatList
+    ScrollView, FlatList,
+    Dimensions
 } from "react-native";
-
+import History from "./History";
+const { width, height } = Dimensions.get('window');
 export default class ContentHBLM extends Component {
     render() {
         return (
@@ -248,12 +250,13 @@ export default class ContentHBLM extends Component {
                         </View>
                     </View>
                     <View style={{
-                        
+                        width: width,
+                        backgroundColor: '#F5F5F5'
                     }}>
-
+                        <History {...this.props} />
                     </View>
                 </View>
-            </ScrollView>
+            </ScrollView >
         )
     }
 }
