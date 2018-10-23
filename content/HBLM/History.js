@@ -145,9 +145,10 @@ class FlatListItem extends Component {
                             flexDirection: 'row',
                             width: 180,
                             justifyContent: 'space-between',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            // backgroundColor: 'black'
                         }}>
-                            <View style={{ flexDirection: 'row' }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image
                                     source={require('../../icons/kill.png')}
                                     style={{
@@ -163,7 +164,7 @@ class FlatListItem extends Component {
                                     {this.props.item.kill}
                                 </Text>
                             </View>
-                            <View style={{ flexDirection: 'row' }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image
                                     source={require('../../icons/death.png')}
                                     style={{
@@ -179,7 +180,7 @@ class FlatListItem extends Component {
                                     {this.props.item.death}
                                 </Text>
                             </View>
-                            <View style={{ flexDirection: 'row' }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image
                                     source={require('../../icons/assist.png')}
                                     style={{
@@ -195,7 +196,7 @@ class FlatListItem extends Component {
                                     {this.props.item.assist}
                                 </Text>
                             </View>
-                            <View style={{ flexDirection: 'row' }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image
                                     source={require('../../icons/gold.png')}
                                     style={{

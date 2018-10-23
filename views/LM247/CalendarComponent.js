@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import {
-    View, Text, Image
+    View, Text
 } from "react-native";
+import ContentCalendar from "../../content/LM247/ContentCalendar";
 
-export default class ForumComponent extends Component {
+export default class CalendarComponent extends Component {
     static navigationOptions = ({ navigation }) => {
         const { params = {} } = navigation.state;
-        let tabBarLabel = 'Diễn đàn';
+        let tabBarLabel = 'LỊCH';
         return { tabBarLabel }
     }
     render() {
         return (
             <View style={{ flex: 1 }}>
-        
+                <ContentCalendar {...this.props} />
             </View>
         )
     }

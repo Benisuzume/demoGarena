@@ -18,31 +18,10 @@ let routeConfigs = {
     },
 };
 let tabNavigatorConfig = {
-    // tabBarPosition: 'top',
     animationEnabled: true,
     swipeEnabled: true,
-    // tabBarOptions: {
-    //     showIcon: false,
-    //     activeTintColor: 'red',
-    //     style: {
-    //         width: '100%',
-    //         backgroundColor: 'white',
-    //         height: 42,
-    //         marginTop: -15,
-    //         paddingTop: -50,
-    //     },
-    //     indicatorStyle: {
-    //         height: 2,
-    //         backgroundColor: 'red',
-    //     },
-    //     labelStyle: {
-    //         fontSize: 14,
-    //         // color: 'black',
-    //         paddingTop: -30,
-    //         alignSelf: 'center',
-    //         fontWeight: 'bold'
-    //     },
-    // },
+    showIcon: false,
+    upperCaseLabel: false, //duong ke cho tab khi acitve
     tabBarOptions: {
         activeTintColor: 'red',
         inactiveTintColor: 'black',
@@ -53,9 +32,8 @@ let tabNavigatorConfig = {
         style: {
             backgroundColor: 'white',
             elevation: 0,
+            height: 50
         },
-        // showIcon: true,
-        upperCaseLabel: false, //duong ke cho tab khi acitve
         labelStyle: {
             fontSize: 15,
             alignSelf: 'center',
