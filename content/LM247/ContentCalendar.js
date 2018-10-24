@@ -12,10 +12,12 @@ class SectionListItem extends Component {
                 {/* Start */}
                 <View style={styles.Start}>
                     <Image source={this.props.item.logoTeam1} style={styles.FixImg} />
-                    <Text numberOfLines={1}
-                        style={{ color: 'black', paddingLeft: 5, fontSize: 22 }}>
-                        {this.props.item.nameTeam1}
-                    </Text>
+                    <View style={{ flex: 1 }}>
+                        <Text numberOfLines={1}
+                            style={{ color: 'black', paddingLeft: 5, fontSize: 16 }}>
+                            {this.props.item.nameTeam1}
+                        </Text>
+                    </View>
                 </View>
 
                 {/* center */}
@@ -35,10 +37,12 @@ class SectionListItem extends Component {
 
                 {/* End */}
                 <View style={styles.End}>
-                    <Text numberOfLines={1}
-                        style={{ color: 'black', paddingRight: 5, fontSize: 22 }}>
-                        {this.props.item.nameTeam1}
-                    </Text>
+                    <View style={{ flex: 1 }}>
+                        <Text numberOfLines={1}
+                            style={{ color: 'black', paddingRight: 5, fontSize: 16 }}>
+                            {this.props.item.nameTeam2}
+                        </Text>
+                    </View>
                     <Image source={this.props.item.logoTeam2} style={styles.FixImg} />
                 </View>
             </View>
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
     },
     Center: {
-        flex: 2,
+        flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',
@@ -97,7 +101,7 @@ class SectionHeader extends Component {
                 backgroundColor: '#F5F5F5'
             }}>
                 <Text style={{
-                    fontSize: 22,
+                    fontSize: 18,
                     color: 'black'
                 }}>
                     {this.props.section.time}
@@ -110,26 +114,60 @@ class SectionHeader extends Component {
 export default class ContentCalendar extends Component {
     render() {
         return (
-            <SectionList
-                renderItem={({ item, index }) => {
-                    return (
-                        <SectionListItem item={item} index={index}>
+            <View style={{
+                flex: 1,
+                justifyContent: 'flex-end',
+                // alignItems: 'flex-end'
+            }}>
+                <SectionList
+                    renderItem={({ item, index }) => {
+                        return (
+                            <SectionListItem item={item} index={index} />
+                        );
+                    }}
+                    renderSectionHeader={({ section }) => {
+                        return (
+                            <SectionHeader section={section} />
+                        )
+                    }}
+                    sections={dataFlatListCalendar}
+                    keyExtractor={(item, index) => item.time}
+                    stickySectionHeadersEnabled={true} >
+                </SectionList>
+                <View style={{
+                    position: 'absolute',
+                    width: '30%',
+                    height: 30,
+                    backgroundColor: 'gray',
+                    opacity: 0.7,
+                    alignSelf: 'flex-end',
+                    // alignContent: 'flex-end',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderTopLeftRadius: 20,
+                    borderBottomLeftRadius: 20,
+                    marginBottom: 20,
+                    zIndex: 1,
+                    bottom: 10
+                }}>
+                    <Image
+                        source={require('../../icons/refresh.png')}
+                        style={{
+                            width: 14, height: 14,
+                            resizeMode: 'contain',
+                            tintColor: 'white',
+                            marginLeft: 2
+                        }} />
+                    <Text style={{
+                        color: 'white',
+                        fontSize: 14
+                    }}>
+                        Làm mới
+                    </Text>
+                </View>
+            </View>
 
-                        </SectionListItem>
-                    );
-                }}
-                renderSectionHeader={({ section }) => {
-                    return (
-                        <SectionHeader section={section}>
-
-                        </SectionHeader>
-                    )
-                }}
-                sections={dataFlatListCalendar}
-                keyExtractor={(item, index) => item.time}
-                stickySectionHeadersEnabled={true} >
-
-            </SectionList>
         )
     }
 }

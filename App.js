@@ -36,7 +36,6 @@ let tabNavigatorConfig = {
     style: {
       width: '100%',
       backgroundColor: 'white',
-      padding: -10,
       height: 60,
       borderTopWidth: 1,
       borderColor: 'gray'
