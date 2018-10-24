@@ -12,7 +12,10 @@ export default class LM247Component extends Component {
         let tabBarIcon = () => (
             <Image
                 source={require('../icons/LM247.png')}
-                style={{ width: 26, height: 26, tintColor: 'grey' }}
+                style={{
+                    width: 26, height: 26,
+                    tintColor: 'grey'
+                }}
             />
         )
         return { tabBarLabel, tabBarIcon }

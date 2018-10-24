@@ -25,29 +25,55 @@ let routeConfigs = {
     screen: MeComponent,
   },
 };
+// let tabNavigatorConfig = {
+//   animationEnabled: false,
+//   swipeEnabled: false,
+//   tabBarOptions: {
+//     activeTintColor: 'red',
+//     upperCaseLabel: false,
+//     showIcon: true,
+//     style: {
+//       width: '100%',
+//       backgroundColor: 'white',
+//       height: 60,
+//       borderTopWidth: 1,
+//       borderColor: 'gray'
+//     },
+//     indicatorStyle: {
+//       backgroundColor: 'transparent'
+//     },
+//     labelStyle: {
+//       fontSize: 11,
+//       color: "grey",
+//     },
+//   },
+// };
 let tabNavigatorConfig = {
-  tabBarPosition: 'bottom',
   animationEnabled: false,
   swipeEnabled: false,
+  showIcon: false,
+  upperCaseLabel: false, //duong ke cho tab khi acitve
   tabBarOptions: {
     activeTintColor: 'red',
-    upperCaseLabel: false,
-    showIcon: true,
-    style: {
-      width: '100%',
-      backgroundColor: 'white',
-      height: 60,
-      borderTopWidth: 1,
-      borderColor: 'gray'
-    },
+    inactiveTintColor: 'grey',
     indicatorStyle: {
-      backgroundColor: 'transparent'
+      backgroundColor: 'transparent',
+    },
+    style: {
+      backgroundColor: 'white',
+      elevation: 0,
+      height: 60
     },
     labelStyle: {
-      fontSize: 11,
-      color: "grey",
+      fontSize: 15,
+      alignSelf: 'center',
+      textAlign: 'center'
     },
-  },
+    //style cho mỗi tab 
+    tabStyle: {
+      flex: 1,
+    },
+  }
 };
 
 export default App = createBottomTabNavigator(routeConfigs, tabNavigatorConfig);

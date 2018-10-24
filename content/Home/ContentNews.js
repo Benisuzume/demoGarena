@@ -49,7 +49,7 @@ export default class ContentNews extends Component {
     }
 
     refreshDataFromServer = () => {
-        getNewsFromServer().then((news) => {s
+        getNewsFromServer().then((news) => {
             this.setState({ newsFromServer: news })
         }).catch((error) => {
             this.setState({ newsFromServer: [] })
@@ -141,12 +141,11 @@ export default class ContentNews extends Component {
                         extraData={this.state}
                         renderItem={({ item, index }) => {
                             return (
-                                <FlatListItem item={item} index={index} parentFlatList={this}>
-
-                                </FlatListItem>
+                                <FlatListItem item={item} index={index} parentFlatList={this} />
                             )
                         }}
-                        keyExtractor={(item, index) => item.id} >
+                        keyExtractor={(item, index) => item.id}
+                    >
                     </FlatList>
                 </View>
             </ScrollView>

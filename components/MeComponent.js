@@ -10,16 +10,17 @@ export default class LM247Component extends Component {
         let tabBarIcon = () => (
             <Image
                 source={require('../icons/user.png')}
-                style={{ width: 26, height: 26, tintColor: 'grey', }}
+                style={{
+                    width: 26, height: 26,
+                    tintColor: 'grey',
+                }}
             />
         )
         return { tabBarLabel, tabBarIcon }
     }
     render() {
         return (
-            <View style={{ flex: 1 }}>
-            
-            </View>
+            <View style={{ flex: 1 }} />
         )
     }
 }

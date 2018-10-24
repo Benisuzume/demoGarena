@@ -12,7 +12,10 @@ export default class HomeComponent extends Component {
         let tabBarIcon = () => (
             <Image
                 source={require('../icons/home.png')}
-                style={{ width: 26, height: 26, tintColor: 'grey' }}
+                style={{
+                    width: 26, height: 26,
+                    tintColor: 'grey'
+                }}
             />
         );
         return { tabBarLabel, tabBarIcon }

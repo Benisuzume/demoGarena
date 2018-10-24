@@ -7,7 +7,6 @@ export default class demoGarena extends Component {
         return (
             <SafeAreaView style={{ flex: 1 }}>
                 <App {...this.props} />
-
             </SafeAreaView>
 
         )

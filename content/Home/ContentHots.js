@@ -70,7 +70,6 @@ export default class ContentNews extends Component {
                 renderItem={({ item, index }) => {
                     return (
                         <FlatListItem item={item} index={index} parentFlatList={this} />
-
                     )
                 }}
             >

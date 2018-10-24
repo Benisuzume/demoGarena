@@ -11,7 +11,10 @@ export default class LiveComponent extends Component {
         let tabBarIcon = () => (
             <Image
                 source={require('../icons/live.png')}
-                style={{ width: 26, height: 26, tintColor: 'grey' }}
+                style={{
+                    width: 26, height: 26,
+                    tintColor: 'grey'
+                }}
             />
         );
         return { tabBarLabel, tabBarIcon }
