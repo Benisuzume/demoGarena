@@ -49,7 +49,7 @@ export default class ContentNews extends Component {
     }
 
     refreshDataFromServer = () => {
-        getNewsFromServer().then((news) => {
+        getNewsFromServer().then((news) => {s
             this.setState({ newsFromServer: news })
         }).catch((error) => {
             this.setState({ newsFromServer: [] })
