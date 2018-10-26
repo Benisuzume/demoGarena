@@ -3,35 +3,44 @@ import {
     View, Text, Image,
     TouchableOpacity,
     FlatList, Dimensions,
-    ScrollView
+    ScrollView,
 } from "react-native";
 import ImageSlider from "react-native-image-slider";
 //Server API
 import { getNewsFromServer } from "../../networking/Server";
 
 class FlatListItem extends Component {
+    con
     render() {
+        const { navigate } = this.props.navigation
         return (
-            <View style={{
-                height: 115,
-                paddingVertical: 12,
-                marginHorizontal: 12,
-                borderBottomWidth: 1,
-                borderColor: '#DCDCDC',
-                flexDirection: 'row'
-            }}>
-                <View style={{ width: '60%', justifyContent: 'flex-start', height: 91 }}>
-                    <Text style={{ fontSize: 18, color: 'black' }} numberOfLines={3}>
-                        {this.props.item.body}
-                    </Text>
-                    <Text style={{ fontSize: 12 }}>
-                        {this.props.item.created_at}
-                    </Text>
+            <TouchableOpacity
+                onPress={() => {
+                    navigate('GeneralNews')
+                }}
+            >
+                <View style={{
+                    height: 115,
+                    paddingVertical: 12,
+                    marginHorizontal: 12,
+                    borderBottomWidth: 1,
+                    borderColor: '#DCDCDC',
+                    flexDirection: 'row'
+                }}>
+                    <View style={{ width: '60%', justifyContent: 'flex-start', height: 91 }}>
+                        <Text style={{ fontSize: 18, color: 'black' }} numberOfLines={3}>
+                            {this.props.item.body}
+                        </Text>
+                        <Text style={{ fontSize: 12 }}>
+                            {this.props.item.created_at}
+                        </Text>
+                    </View>
+                    <Image
+                        source={{ uri: 'https://picsum.photos/200/300/?random' }}
+                        style={{ width: 150, marginLeft: 12 }} />
                 </View>
-                <Image
-                    source={{ uri: 'https://picsum.photos/200/300/?random' }}
-                    style={{ width: 150, marginLeft: 12 }} />
-            </View>
+            </TouchableOpacity>
+
         )
     }
 }
