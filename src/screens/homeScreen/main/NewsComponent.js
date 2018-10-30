@@ -1,23 +1,20 @@
 import React, { Component } from "react";
 import {
     View, Text, Image,
-    TouchableOpacity,
-    FlatList, Dimensions,
-    ScrollView,
+    ScrollView, TouchableOpacity, FlatList
 } from "react-native";
 import ImageSlider from "react-native-image-slider";
-//Server API
-import { getNewsFromServer } from "../../networking/Server";
+import { getNewsFromServer } from "../../../networking/Server";
 
 class FlatListItem extends Component {
-    con
+    constructor(props) {
+        super(props);
+
+    }
     render() {
-        const { navigate } = this.props.navigation
         return (
             <TouchableOpacity
-                onPress={() => {
-                    navigate('GeneralNews')
-                }}
+                onPress={() => this.props.parentFlatList.screenProps.goToGeneralNews()}
             >
                 <View style={{
                     height: 115,
@@ -45,7 +42,7 @@ class FlatListItem extends Component {
     }
 }
 
-export default class ContentNews extends Component {
+export default class NewsComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -104,11 +101,10 @@ export default class ContentNews extends Component {
                             justifyContent: 'center',
                             alignItems: 'center'
                         }}
-                            onPress={() => {
-                                alert(`You touch button`)
-                            }} >
+                            onPress={() => this.props.screenProps.goToGeneralNews()}
+                        >
                             <Image
-                                source={require('../../icons/live.png')}
+                                source={require('../../../icons/live.png')}
                                 style={{ width: 26, height: 26, tintColor: '#0000FF', marginBottom: 4 }} />
                             <Text style={{ fontSize: 14, color: 'black' }}>
                                 LIVE
@@ -123,7 +119,7 @@ export default class ContentNews extends Component {
                                 alert(`You touch button`)
                             }}>
                             <Image
-                                source={require('../../icons/HBLM.png')}
+                                source={require('../../../icons/hblm.png')}
                                 style={{ width: 26, height: 26, tintColor: '#009900', marginBottom: 4 }} />
                             <Text style={{ fontSize: 14, color: 'black' }}>
                                 HBLM
@@ -138,7 +134,7 @@ export default class ContentNews extends Component {
                                 alert(`You touch button`)
                             }}>
                             <Image
-                                source={require('../../icons/VQMM.png')}
+                                source={require('../../../icons/vqmm.png')}
                                 style={{ width: 26, height: 26, tintColor: '#CC0000', marginBottom: 4 }} />
                             <Text style={{ fontSize: 14, color: 'black' }}>
                                 VQMM
@@ -150,7 +146,7 @@ export default class ContentNews extends Component {
                         extraData={this.state}
                         renderItem={({ item, index }) => {
                             return (
-                                <FlatListItem item={item} index={index} parentFlatList={this} />
+                                <FlatListItem item={item} index={index} parentFlatList={this.props} />
                             )
                         }}
                         keyExtractor={(item, index) => item.id}

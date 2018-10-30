@@ -25,7 +25,7 @@ export default class HeaderComponent extends Component {
                             alert(`You click button`)
                         }} >
                         <Image
-                            source={require('../images/logos/LoL_logo.png')}
+                            source={require('../../images/logos/LoL_logo.png')}
                             style={{
                                 width: 26, height: 26,
                                 borderRadius: 13, borderWidth: 2,
@@ -47,7 +47,7 @@ export default class HeaderComponent extends Component {
                         alert(`You click button`)
                     }} >
                     <Image
-                        source={require('../icons/messenger.png')}
+                        source={require('../../icons/messenger.png')}
                         style={{
                             width: 22, height: 22,
                         }} />

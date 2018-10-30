@@ -3,7 +3,7 @@ import {
     View, Text, Image,
     SectionList, StyleSheet
 } from "react-native";
-import dataFlatListCalendar from "../../data/dataFlatListCalendar";
+import dataFlatListCalendar from "../../../data/dataFlatListCalendar";
 
 class SectionListItem extends Component {
     render() {
@@ -111,7 +111,8 @@ class SectionHeader extends Component {
     }
 }
 
-export default class ContentCalendar extends Component {
+
+export default class CalendarComponent extends Component {
     render() {
         return (
             <View style={{
@@ -152,7 +153,7 @@ export default class ContentCalendar extends Component {
                     bottom: 10
                 }}>
                     <Image
-                        source={require('../../icons/refresh.png')}
+                        source={require('../../../icons/refresh.png')}
                         style={{
                             width: 14, height: 14,
                             resizeMode: 'contain',

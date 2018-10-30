@@ -26,7 +26,7 @@ export default class ContentHBLM extends Component {
                             flexDirection: 'row'
                         }}>
                             <Image
-                                source={require('../../images/logos/cloud9.jpg')}
+                                source={require('../../../images/logos/cloud9.jpg')}
                                 style={{
                                     width: 50,
                                     height: 50,
@@ -137,7 +137,7 @@ export default class ContentHBLM extends Component {
                             width: '5%',
                         }}>
                             <Image
-                                source={require('../../icons/arrow-point-to-right.png')}
+                                source={require('../../../icons/arrow-point-to-right.png')}
                                 style={{ width: 14, height: 14, tintColor: '#BEBEBE' }} />
                         </View>
                     </View>
@@ -166,13 +166,13 @@ export default class ContentHBLM extends Component {
                                     Tướng Của Tôi
                             </Text>
                                 <Image
-                                    source={require('../../icons/arrow-point-to-right.png')}
+                                    source={require('../../../icons/arrow-point-to-right.png')}
                                     style={{ width: 14, height: 14, tintColor: '#BEBEBE' }}
                                 />
                             </View>
                             <View style={{ flex: 3 }}>
                                 <Image
-                                    source={require('../../images/tristana.jpg')}
+                                    source={require('../../../images/tristana.jpg')}
                                     style={{ width: '100%', height: '100%', resizeMode: 'cover' }}
                                 />
                             </View>
@@ -195,13 +195,13 @@ export default class ContentHBLM extends Component {
                                     Xu Hướng
                             </Text>
                                 <Image
-                                    source={require('../../icons/arrow-point-to-right.png')}
+                                    source={require('../../../icons/arrow-point-to-right.png')}
                                     style={{ width: 14, height: 14, tintColor: '#BEBEBE' }}
                                 />
                             </View>
                             <View style={{ flex: 3 }}>
                                 <Image
-                                    source={require('../../images/leesin.jpg')}
+                                    source={require('../../../images/leesin.jpg')}
                                     style={{ width: '100%', height: '100%', resizeMode: 'cover' }}
                                 />
                             </View>
@@ -239,7 +239,7 @@ export default class ContentHBLM extends Component {
                             alignItems: 'center'
                         }}>
                             <Image
-                                source={require('../../icons/friend.png')}
+                                source={require('../../../icons/friend.png')}
                                 style={{ width: 14, height: 14 }} />
                             <Text style={{
                                 fontSize: 14,

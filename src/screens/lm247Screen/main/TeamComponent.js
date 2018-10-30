@@ -3,7 +3,7 @@ import {
     View, Text, Image,
     FlatList
 } from "react-native";
-import dataFlatListTeam from "../../data/dataFlatListTeam";
+import dataFlatListTeam from "../../../data/dataFlatListTeam";
 
 class FlatListItem extends Component {
     render() {
@@ -42,7 +42,7 @@ class FlatListItem extends Component {
                         </Text>
                     </View>
                     <Image
-                        source={require('../../icons/arrow-point-to-right.png')}
+                        source={require('../../../icons/arrow-point-to-right.png')}
                         style={{
                             width: 12, height: 12,
                             resizeMode: 'contain',
@@ -54,7 +54,7 @@ class FlatListItem extends Component {
     }
 }
 
-export default class ContentTeam extends Component {
+export default class TeamComponent extends Component {
     render() {
         return (
             <FlatList

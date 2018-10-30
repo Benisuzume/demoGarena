@@ -3,7 +3,7 @@ import {
     View, Text, Image,
     FlatList
 } from "react-native";
-import dataFlatListHistory from "../../data/dataFlatListHistory";
+import dataFlatListHistory from "../../../data/dataFlatListHistory";
 
 class FlatListItem extends Component {
     render() {
@@ -116,7 +116,7 @@ class FlatListItem extends Component {
                     </View>
                     <View style={{ justifyContent: 'center' }}>
                         <Image
-                            source={require('../../icons/arrow-point-to-right.png')}
+                            source={require('../../../icons/arrow-point-to-right.png')}
                             style={{ width: 12, height: 12, resizeMode: 'contain' }} />
                     </View>
                 </View>
@@ -150,7 +150,7 @@ class FlatListItem extends Component {
                         }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image
-                                    source={require('../../icons/kill.png')}
+                                    source={require('../../../icons/kill.png')}
                                     style={{
                                         width: 12, height: 12,
                                         resizeMode: 'contain',
@@ -166,7 +166,7 @@ class FlatListItem extends Component {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image
-                                    source={require('../../icons/death.png')}
+                                    source={require('../../../icons/death.png')}
                                     style={{
                                         width: 12, height: 12,
                                         resizeMode: 'contain',
@@ -182,7 +182,7 @@ class FlatListItem extends Component {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image
-                                    source={require('../../icons/assist.png')}
+                                    source={require('../../../icons/assist.png')}
                                     style={{
                                         width: 12, height: 12,
                                         resizeMode: 'contain',
@@ -198,7 +198,7 @@ class FlatListItem extends Component {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image
-                                    source={require('../../icons/gold.png')}
+                                    source={require('../../../icons/gold.png')}
                                     style={{
                                         width: 12, height: 12,
                                         resizeMode: 'contain',

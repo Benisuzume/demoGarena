@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import {
     View, Text, Image,
-    FlatList, Dimensions
+    Dimensions, FlatList
 } from "react-native";
-import { getNewsFromServer } from "../../networking/Server";
+import { getNewsFromServer } from "../../../networking/Server";
 
 const width = Dimensions.get('window');
 class FlatListItem extends Component {
@@ -25,7 +25,7 @@ class FlatListItem extends Component {
                     {this.props.item.body}
                 </Text>
                 <Image
-                    source={require('../../images/champion.jpg')}
+                    source={require('../../../images/champion.jpg')}
                     style={{
                         width: '100%',
                         height: '100%',
@@ -38,7 +38,7 @@ class FlatListItem extends Component {
     }
 }
 
-export default class ContentNews extends Component {
+export default class HotsComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
