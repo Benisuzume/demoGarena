@@ -1,4 +1,3 @@
-
 const apiGetAllPics = 'https://api.github.com/repositories/19438/issues';
 // const apiGetAllPics = 'http://192.168.1.56:81/test/bang1.php';
 async function getNewsFromServer() {

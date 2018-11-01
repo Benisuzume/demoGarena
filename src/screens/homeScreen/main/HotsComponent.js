@@ -52,6 +52,7 @@ export default class HotsComponent extends Component {
 
     refreshDataFromServer = () => {
         getNewsFromServer().then((hots) => {
+            // alert(JSON.stringify(hots))
             this.setState({ hotsFromServer: hots })
             // alert(JSON.stringify(this.state.hotsFromServer))
         }).catch((error) => {

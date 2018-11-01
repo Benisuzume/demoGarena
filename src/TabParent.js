@@ -160,8 +160,8 @@ let tabNavigatorConfig = {
 const AppScreen = createBottomTabNavigator(routeConfigs, tabNavigatorConfig);
 
 export default class TabParent extends Component {
-  goToGeneralNews = () => {
-    this.props.navigation.navigate('GeneralNews')
+  goToGeneralNews = (index, title) => {
+    this.props.navigation.navigate('GeneralNews', { index: index, title })
   }
   render() {
     return (

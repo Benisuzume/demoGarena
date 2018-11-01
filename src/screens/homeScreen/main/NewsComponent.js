@@ -9,12 +9,16 @@ import { getNewsFromServer } from "../../../networking/Server";
 class FlatListItem extends Component {
     constructor(props) {
         super(props);
+    }
 
+    onPressItem = (sendDataIndex) => () => {
+        this.props.screenProps.goToGeneralNews(sendDataIndex, 'Tin tức')
+        // alert(JSON.stringify(index))
     }
     render() {
         return (
             <TouchableOpacity
-                onPress={() => this.props.parentFlatList.screenProps.goToGeneralNews()}
+                onPress={this.onPressItem(this.props.item)}
             >
                 <View style={{
                     height: 115,
@@ -146,10 +150,10 @@ export default class NewsComponent extends Component {
                         extraData={this.state}
                         renderItem={({ item, index }) => {
                             return (
-                                <FlatListItem item={item} index={index} parentFlatList={this.props} />
+                                <FlatListItem item={item} index={index} {...this.props} />
                             )
                         }}
-                        keyExtractor={(item, index) => item.id}
+                        keyExtractor={(item, index) => index.toString()}
                     >
                     </FlatList>
                 </View>
