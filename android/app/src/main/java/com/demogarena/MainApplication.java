@@ -3,6 +3,7 @@ package com.demogarena;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.dylanvann.fastimage.FastImageViewPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
 import com.iou90.autoheightwebview.AutoHeightWebViewPackage;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new FastImageViewPackage(),
             new VectorIconsPackage(),
             new ReactNativeYouTube(),
             new AutoHeightWebViewPackage()

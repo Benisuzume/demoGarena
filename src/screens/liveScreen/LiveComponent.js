@@ -31,20 +31,6 @@ export default class LiveComponent extends Component {
                     flex: 1,
                     // backgroundColor: 'pink'
                 }}>
-                    {/* <YouTube
-                        videoId="HXkh7EOqcQ4"   // The YouTube video ID
-                        play={true}             // control playback of video with true/false
-                        fullscreen={false}       // control whether the video should play in fullscreen or inline
-                        loop={true}             // control whether the video should loop when ended
-                        // playlistId='RDGMEMHDXYb1_DDSgDsobPsOFxpAVMCPkGTSW34_I'
-
-                        onReady={e => this.setState({ isReady: true })}
-                        onChangeState={e => this.setState({ status: e.state })}
-                        onChangeQuality={e => this.setState({ quality: e.quality })}
-                        onError={e => this.setState({ error: e.error })}
-
-                        style={{ alignSelf: 'stretch', height: 300 }}
-                    /> */}
                     <ScreenVideo />
                 </View>
             </View>

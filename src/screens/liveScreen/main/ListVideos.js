@@ -94,6 +94,7 @@ export default class ListVieos extends Component {
     refreshDataFromServer = () => {
         getVideoFromServer().then((news) => {
             this.setState({ dataVideos: news.items })
+            // alert(JSON.stringify(news))
         }).catch((error) => {
             this.setState({ dataVideos: [] })
         })

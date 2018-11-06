@@ -7,6 +7,7 @@ import dataFlatListTeam from "../../../data/dataFlatListTeam";
 
 class FlatListItem extends Component {
     render() {
+        alert(JSON.stringify(dataFlatListTeam))
         return (
             <View style={{
                 height: 65,
