@@ -3,7 +3,7 @@ import {
     Text, View, Image,
     TouchableOpacity,
     WebView, Platform,
-    Dimensions
+    Dimensions,
 } from 'react-native';
 import AutoHeightWebView from "react-native-autoheight-webview";
 var { width, height } = Dimensions.get('window');
@@ -22,6 +22,7 @@ export default class GeneralNews extends Component {
     }
     render() {
         return (
+            
             <View style={{ flex: 1 }}>
                 <View style={{
                     height: 60,

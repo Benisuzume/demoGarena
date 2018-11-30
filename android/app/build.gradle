@@ -94,8 +94,8 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 26
+    buildToolsVersion '26.1.0'
 
     defaultConfig {
         applicationId "com.demogarena"
@@ -142,7 +142,7 @@ dependencies {
     compile project(':react-native-youtube')
     compile project(':react-native-autoheight-webview')
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:appcompat-v7:27.1.1'
     compile 'com.facebook.react:react-native:+'
     // From node_modules
 }

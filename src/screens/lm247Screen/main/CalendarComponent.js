@@ -105,6 +105,7 @@ class SectionHeader extends Component {
                     color: 'black'
                 }}>
                     {this.props.section.time}
+                    {this.props.section.title}
                 </Text>
             </View>
         )

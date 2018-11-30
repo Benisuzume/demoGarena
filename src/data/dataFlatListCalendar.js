@@ -56,7 +56,8 @@ const dataFlatListCalendar = [
                 logoTeam2: require('../images/logoTeam/FNC_logo.png')
             },
         ],
-        time: '17 Th10 Thứ tư'
+        time: '17 Th10 Thứ tư',
+        title: 'A'
     },
     {
         data: [
@@ -80,6 +81,7 @@ const dataFlatListCalendar = [
             },
         ],
         time: '20 Th10 Thứ bảy',
+        title: 'B'
     },
     {
         data: [
@@ -103,6 +105,7 @@ const dataFlatListCalendar = [
             },
         ],
         time: '21 Th10 Chủ nhật',
+        title: 'C'
     },
 ];
 
